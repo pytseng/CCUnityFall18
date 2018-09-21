@@ -9,14 +9,14 @@ public class VectorVisualizer : MonoBehaviour {
     Vector3 normalA;
 
 	void Start () {
-        vecA = new Vector3(3, 6, 9);
-        vecB = new Vector3(-2, 2, 8);
+        //vecA = new Vector3(3, 6, 9);
+        //vecB = new Vector3(-2, 2, 8);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //DrawVectorMath();
-        DrawTransformVectors();
+        //DrawTransformVectors();
     }
 
     void DrawVectorMath(){
