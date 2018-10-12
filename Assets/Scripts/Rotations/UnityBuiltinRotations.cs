@@ -27,11 +27,16 @@ public class UnityBuiltinRotations : MonoBehaviour {
 	}
 
 void RotateManually(){
+        //if rotate on pitch;
         xAngle += 1;
+        //if rotate on yaw;
         yAngle += 1;
+        //if rotate on roll;
         zAngle += 1;
 
         transform.localRotation = Quaternion.Euler(xAngle, yAngle, zAngle);
 }
+
+
 
 }
