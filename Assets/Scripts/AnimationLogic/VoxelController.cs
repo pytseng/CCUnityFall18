@@ -11,7 +11,10 @@ public class VoxelController : MonoBehaviour {
     bool jumpStarted;
     bool jumpEnded = true;
     bool startReturnToZero;
-
+    float motion1;
+    float motion2;
+    bool loseStart;
+    bool deathStart;
 	void Start () {
         anim = this.GetComponent<Animator>();
         rb = this.GetComponent<Rigidbody>();
@@ -22,6 +25,7 @@ public class VoxelController : MonoBehaviour {
 	void Update () {
         WalkLogic();
         JumpLogic();
+        BlendStates();
 	}
 
     void WalkLogic(){
@@ -55,5 +59,24 @@ public class VoxelController : MonoBehaviour {
     }
     public void FinishedJump(){
         jumpEnded = true;
+    }
+
+    void BlendStates(){
+        motion1 = Input.GetAxis("Vertical");
+        motion2 = Input.GetAxis("Horizontal");
+        if(Input.GetKeyDown(KeyCode.RightArrow)){
+            loseStart = true;
+        } else {
+            loseStart = false;
+        }
+        if(Input.GetKeyDown(KeyCode.UpArrow)){
+            deathStart = true;
+        } else {
+            deathStart = false;
+        }
+        anim.SetFloat("Death", motion1);
+        anim.SetFloat("Lose", motion2);
+        anim.SetBool("DeathStart", deathStart);
+        anim.SetBool("LoseStart", loseStart);
     }
 }
