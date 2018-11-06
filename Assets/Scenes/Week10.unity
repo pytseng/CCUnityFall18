@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 61497223}
   - component: {fileID: 61497222}
   - component: {fileID: 61497224}
+  - component: {fileID: 61497225}
   m_Layer: 0
   m_Name: FallingOBjextsParent
   m_TagString: Untagged
@@ -136,12 +137,13 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 61497221}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 971e5b7f210dd4f23b55d18e05c705c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rain: {fileID: 1968300236646492, guid: 0f6193444dd984eadba11d866ab12963, type: 2}
+  RunRain: 0
 --- !u!4 &61497223
 Transform:
   m_ObjectHideFlags: 0
@@ -166,7 +168,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc08d91e1b44422fafa9a327121e9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RunGrid: 0
   cube: {fileID: 1968300236646492, guid: 0f6193444dd984eadba11d866ab12963, type: 2}
+--- !u!114 &61497225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61497221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30fa37948d454ab3ac5d8bed3a2b92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMode: 1
 --- !u!1 &724842750
 GameObject:
   m_ObjectHideFlags: 0
