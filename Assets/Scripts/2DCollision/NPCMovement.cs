@@ -10,7 +10,7 @@ public class NPCMovement : MonoBehaviour {
     float amplitude;
 
     [SerializeField] bool rotate;
-    [SerializeField] bool oscil;
+    public bool oscil;
 
     // Use this for initialization
     void Start () {
